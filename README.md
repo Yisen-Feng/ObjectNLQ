@@ -15,6 +15,7 @@ This repo supports training and evaluation of the Ego4D-NLQ dataset.
   * [Finetune](#Training-Finetune)
   * [Inference](#Inference)
   * [Ensemble](#Ensemble)
+* [Citation](#citation)
 * [Acknowledgement](#Acknowledgements)
 
 
@@ -49,7 +50,6 @@ bash <tools/*,scripts> CONFIG_FILE EXP_ID CUDA_DEVICE_ID
 where `CONFIG_FILE` is the config file for model/dataset hyperparameter initialization,
 `EXP_ID` is the model output directory name defined by yourself, `CUDA_DEVICE_ID` is cuda device id.
 The checkpoints and other experiment log files will be written into `<output_folder>/OUTPUT_PATH`, output_folder is defined in the config file. 
-- ObjectNLQ：ego4d_nlq_v2_object_encoderca_1e-4.yaml
 
 ### Training-Finetune
 Training can be launched by running the following command:
@@ -71,7 +71,7 @@ where `CHECKPOINT_PATH` is the path to the saved checkpoint,`save` is for contro
 * The results (Recall@K at IoU = 0.3 or 0.5) on the val. set should be similar to the performance of the below table reported in the main report.
 
 |  Method   |    Dataset   | R@1 IoU=0.3 | R@1 IoU=0.5 | R@5 IoU=0.3 | R@5 IoU=0.5   |
-|--------------------------|-------------|-------------|-------------|---------------|
+|-----------|--------------|-------------|-------------|-------------|---------------|
 | ObjectNLQ |     NLQ      | 28.43       | 19.95       | 56.06       | 42.09         | 
 | ObjectNLQ |  GoalStep    | 28.34       | 24.08       | 57.03       | 50.39         | 
 
@@ -86,7 +86,16 @@ or
 ```
 python ensemble_more.py
 ```
-
+## Citation
+If you are using our code, please consider citing our paper.
+```
+@article{feng2024objectnlq,
+  title={ObjectNLQ@ Ego4D Episodic Memory Challenge 2024},
+  author={Feng, Yisen and Zhang, Haoyu and Xie, Yuquan and Li, Zaijing and Liu, Meng and Nie, Liqiang},
+  journal={arXiv preprint arXiv:2406.15778},
+  year={2024}
+}
+```
 ## Acknowledgements
 This code is inspired by [GroundNLQ](https://github.com/houzhijian/GroundNLQ). 
 We use the same video and text feature as GroundNLQ. 
