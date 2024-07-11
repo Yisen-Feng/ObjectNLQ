@@ -1,0 +1,17 @@
+core.15547
+core.*
+*.tar
+*.pyc
+*.pt
+checkpoint
+libs/utils/build/lib.linux-x86_64-cpython-39/nms_1d_cpu.cpython-39-x86_64-linux-gnu.so
+libs/utils/nms_1d_cpu.egg-info/PKG-INFO
+libs/utils/build/temp.linux-x86_64-cpython-39/.ninja_deps
+libs/utils/build/temp.linux-x86_64-cpython-39/.ninja_log
+libs/utils/build/temp.linux-x86_64-cpython-39/build.ninja
+libs/utils/build/temp.linux-x86_64-cpython-39/csrc/nms_cpu.o
+ego4d_data/narrations/format_unique_pretrain_data_v2.jsonl
+ego4d_data_narration/format_unique_pretrain_data.jsonl
+video
+*.whl
+ego4d_nlq_narration_v2_lemma_question.jsonl
